@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tooltip .tooltiptext {
+  @apply invisible dark:bg-[#F8F8FF] dark:text-[#353839] bg-gray-700 text-white text-sm rounded py-2 px-3 absolute z-10 opacity-0 transition-opacity duration-300;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltiptext {
+  @apply visible opacity-100;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  @apply absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent dark:border-t-[#F8F8FF] border-t-gray-700;
+}
+::-webkit-scrollbar {
+  @apply hidden
+}
+
+/* Custom SweetAlert2 config */
+.swal2-confirm.custom-confirm-btn {
+  @apply bg-[#3a3b3c] outline-none text-white ;
+}
+
+.swal2-cancel.custom-cancel-btn {
+  border: 2px black solid;
+  background: none;
+  color: black;
+}
+
+.custom-input:focus{
+outline: none;
+}
+/* Remove hover effect for the cancel button */
+.swal2-cancel.custom-cancel-btn:hover {
+ @apply  hover:bg-none 
+}
+/* Remove hover effect for the cancel button */
+.swal2-confirm.custom-confirm-btn:hover {
+ @apply  hover:bg-[#3a3b3c] 
+}

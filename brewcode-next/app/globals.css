@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #eeeff1;
+  --foreground: #28282b;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-[12px] h-full; /* Width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--foreground);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent h-20; /* Transparent background for track */
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply hidden; /* Width of the scrollbar */
+  }
+}

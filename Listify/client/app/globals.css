@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom SweetAlert2 config */
+.swal2-confirm.custom-confirm-btn {
+  @apply bg-[#3a3b3c] outline-none text-white ;
+}
+
+.swal2-cancel.custom-cancel-btn {
+  border: 2px black solid;
+  background: none;
+  color: black;
+}
+
+.custom-input:focus{
+outline: none;
+}
+/* Remove hover effect for the cancel button */
+.swal2-cancel.custom-cancel-btn:hover {
+ @apply  hover:bg-none 
+}
+/* Remove hover effect for the cancel button */
+.swal2-confirm.custom-confirm-btn:hover {
+ @apply  hover:bg-[#3a3b3c] 
+}
+
+/* Custom CSS for circular checkbox */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #000; /* Tailwind color gray-300 */
+  border-radius: 50%;
+  width: 1.25rem; /* 5 width unit */
+  height: 1.25rem; /* 5 height unit */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #3b82f6; /* Tailwind color blue-500 */
+  border-color: #3b82f6; /* Tailwind color blue-500 */
+}
+
+.custom-checkbox:checked::after {
+  content: '\2713'; /* Unicode check mark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem; /* Adjust the size of the check mark */
+  color: white;
+  position: relative;
+  top: -1px;
+}

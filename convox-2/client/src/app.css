@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-white: #f6f5fa;
+	--color-black: #2f2e2c;
+	--font-stardock: 'stardock';
+	--font-michroma: 'Michroma', sans-serif;
+}
+::-webkit-scrollbar {
+	@apply hidden;
+}
+
+@font-face {
+	font-family: 'stardock';
+	src: url('/font/Stardock.ttf') format('truetype');
+}
+.swal2-dark {
+	@apply bg-black text-white;
+}
+.swal2-light {
+	@apply bg-white text-black;
+}
